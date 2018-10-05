@@ -60,7 +60,7 @@ public class WebServiceControle {
         else
         {
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
-                    "https://cloud.squidex.io/app/consumo/content/teste",
+                    "https://cloud.squidex.io/api/content/consumo/teste",
                     null,
                     new Response.Listener<JSONObject>()
                     {
@@ -125,7 +125,7 @@ public class WebServiceControle {
         {
             JsonObjectRequest jsonObjectRequest
                     = new JsonObjectRequest(Request.Method.POST,
-                    "https://cloud.squidex.io/app/consumo/content/teste?publish=true",
+                    "https://cloud.squidex.io/api/content/consumo/teste?publish=true",
                     new JSONObject(new Gson().toJson(data)),
                     new Response.Listener<JSONObject>()
                     {
@@ -189,7 +189,7 @@ public class WebServiceControle {
         else
         {
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT,
-                    "https://cloud.squidex.io/app/consumo/content/teste/" + id,
+                    "https://cloud.squidex.io/api/content/consumo/teste/" + id,
                     new JSONObject(new Gson().toJson(data)),
                     new Response.Listener<JSONObject>()
                     {
@@ -247,7 +247,7 @@ public class WebServiceControle {
         else
         {
             StringRequest stringRequest = new StringRequest(Request.Method.DELETE,
-                    "https://cloud.squidex.io/app/consumo/content/teste/" + id,
+                    "https://cloud.squidex.io/api/content/consumo/teste/" + id,
                     new Response.Listener<String>()
                     {
                         @Override
